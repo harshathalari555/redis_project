@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th style="width:10%">Recipe Name</th>
+                <th style="width:10%">Image</th>
+                <th style="width:10%">Quantity</th>
+                <th style="width:10%">Price</th>
+                <th style="width:10%">Total</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for r in cart %}
+            <tr class="pt-4">
+            <td>{{r.recipe.name}}</td>
+            <td><img src="{{r.recipe.image}}" class="p-2" style="height:100px"></td>
+            <td>{{r.quantity}}</td>
+            <td>{{r.recipe.price}}</td>
+            <td>{{r.total}}</td>
+            </tr>
+            {% endfor %}
+            <hr>
+        </tbody>
+    <div class = "subtotal">
+        Total <h1>{{r.sub_total}}</h1>
+</body>
+
+</html>
+{{order}}
