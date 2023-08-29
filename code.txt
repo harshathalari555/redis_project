@@ -8,3 +8,5 @@ CACHES = {
         "KEY_PREFIX": "example"
     }
 }
+
+#Hi merge request 
